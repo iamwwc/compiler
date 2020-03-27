@@ -1,6 +1,6 @@
 import fs from 'fs'
 import { resolve } from "path";
-import { Program } from './src/parser/types';
+import { Program } from './src/tokenizer/types';
 import { Parser } from './src/parser';
 
 const dir = (...args: Array<string>) => resolve(...args)

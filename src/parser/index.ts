@@ -1,36 +1,27 @@
-import { Program, Token } from "./types";
-import { State } from "./state";
+import Tokenizer from "@/tokenizer";
+import { Node, Program, Token } from "../tokenizer/types";
 
 /**
  * recursive descent parser
  */
-export class Parser {
-  state: State = new State()
+export class Parser extends Tokenizer{
   token: Token | null
-
   constructor() {
+    super()
     this.token = null
   }
 
-  /**
-   * 扫描下一个token
-   */
-  nextToken() {
-
-  }
+  
 
   /**
-   * 扫描完token之后调用，更新 state
+   * 从当前pos创建新的node
    */
-  finishToken() {
-
+  startNode() {
+    // return new Node(this,this.state.curPos, this.state.)
   }
 
   parse(input: string): Program | null {
+    this.input = input
     return null
-  }
-
-  getTokenFromCode() {
-
   }
 }

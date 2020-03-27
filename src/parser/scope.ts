@@ -1,4 +1,4 @@
-class Scope {
+export class Scope {
   functions: string[] = []
   lexical: string[] = []
   var: string[] = []
@@ -32,4 +32,10 @@ export class ScopeHandler {
   createScope(flags: number) {
     return new Scope(flags)
   }
+}
+
+export enum flags {
+  SCOPE_PROGRAM,
+  SCOPE_FUNCTION,
+  SCOPE_BLOCK
 }
